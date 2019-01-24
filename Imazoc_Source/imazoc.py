@@ -2,7 +2,8 @@
 .
 .
 ATTENTION!
-Before executing the program make sure that the image name "sample.jpeg" i.e. used in this program, must be replaced by the name of your sample/test image and the image and this program must be put inside the same directory.
+Before executing the program make sure that the image name "sample.jpeg" i.e. used in this program, must be replaced by the name of your sample/test image. 
+The image and this program must be kept in the same directory.
 .
 .
 '''
@@ -12,7 +13,7 @@ import numpy as np
 from PIL import Image, ImageTk, ImageOps
 
 def createGreyList():
-	im = Image.open('AsAtAn.jpeg')    # Replace sample.jpeg with the name of your sample/test image
+	im = Image.open('sample.jpeg')    # Replace sample.jpeg with the name of your sample/test image
 	myGreyscale = im.convert('L')
 	myGreyscale.save('sample_greyscale.jpeg','JPEG')
 	im = Image.open('sample_greyscale.jpeg')
@@ -130,24 +131,25 @@ def noiseSmMode(blockArrayNp,im_array2):
 #_________________________________________________________________________________________________
 
 if __name__=="__main__":
-	print("\n")
-	print("\t _________________________________________________________________________________________")
-	print("\t|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
-	print("\t|_|    _________________                                                                |_|")
-	print("\t|_|   /                /                                                                |_|")
-	print("\t|_|  /_____      _____/                                                                 |_|")
-	print("\t|_|        |    |                                                                       |_|")
-	print("\t|_|        |    |                                                                       |_|")
-	print("\t|_|        |    |        ______      _______   _________    _______  ________   _____   |_|")
-	print("\t|_|        |    |       /      \    /       | /         |  /      / /        \ /     \  |_|")
-	print("\t|_|        |    |      /        \  /        |/  _____   | /__    / |   ____   |   ____| |_|")
-	print("\t|_|   _____|    |_____/    /\    \/    /|   |  |     |  |   /   /  |  |    |  |  |      |_|")
-	print("\t|_|  /               /    /  \        / |   |  |_____|  |__/   /___|  |____|  |  |_____ |_|")
-	print("\t|_| /_______________/____/    \______/  |___|\____________/_______/ \________/ \______/ |_|")
-	print("\t|_|_____________________________________________________________________________________|_|")
-	print("\t|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_                       _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
-	print("\t|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ WELCOME TO IMAZOC 1.0 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
-	print("\t|_________________________________________________________________________________________|")
+	print("""
+	 _________________________________________________________________________________________
+	|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|
+	|_|    _________________                                                                |_|
+	|_|   /                /                                                                |_|
+	|_|  /_____      _____/                                                                 |_|
+	|_|        |    |                                                                       |_|
+	|_|        |    |                                                                       |_|
+	|_|        |    |        ______      _______   _________    _______  ________   _____   |_|
+	|_|        |    |       /      \\    /       | /         |  /      / /        \\ /     \\  |_|
+	|_|        |    |      /        \\  /        |/  _____   | /__    / |   ____   |   ____| |_|
+	|_|   _____|    |_____/    /\\    \\/    /|   |  |     |  |   /   /  |  |    |  |  |      |_|
+	|_|  /               /    /  \\        / |   |  |_____|  |__/   /___|  |____|  |  |_____ |_|
+	|_| /_______________/____/    \\______/  |___|\\____________/_______/ \\________/ \\______/ |_|
+	|_|_____________________________________________________________________________________|_|
+	|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_                       _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|
+	|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ WELCOME TO IMAZOC 1.0 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|
+	|_________________________________________________________________________________________|
+	""")
 	print("\n\t Initiated IMAZOC 1.0 Program...\n")
 	print("\t Initializing parameters... This may take some time depending on your processor...",end="   ")
 	slice_x = 3
